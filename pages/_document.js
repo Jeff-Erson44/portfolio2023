@@ -32,12 +32,12 @@ export default class MyDocument extends Document {
     return (
       <Html lang='fr'>
         <Head >
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="description" content="Portfolio de Jefferson K." />
           <meta name="author" content="Jefferson K." />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"b/>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
         </Head>
           <body>
           <Main />

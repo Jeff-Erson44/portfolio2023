@@ -1,0 +1,10 @@
+:root{
+    --white : #fdfdfd;
+    --black: #0C0C0C;
+
+    --mb30 : margin-bottom:30px;
+    --mb50 : margin-bottom:50px;
+    --mb100 : margin-bottom:100px;
+    --mb150 : margin-bottom:150px;
+}
+

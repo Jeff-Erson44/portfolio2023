@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Jefferson K. - Portfolio</title>
       </Head>
+      <h1>Jefferson K.</h1>
     </>
   )
 }
