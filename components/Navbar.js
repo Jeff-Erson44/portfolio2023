@@ -1,8 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
+import { useState } from "react";
 
 export default function Navbar() {
+
+const [isOpen, setIsOpen] = useState(false);
+
+const handleNavbar = () => {
+    setIsOpen(!isOpen);
+}
 
 const NavbarStyled = styled.nav`
     .navbar{
@@ -29,8 +36,38 @@ const NavbarStyled = styled.nav`
             }
         }
     }
-`
+    .navbar__mobile{
+        display: none;
+    }
 
+    @media screen and (max-width: 768px){
+        .navbar{
+            display: none;
+        }
+        .navbar__mobile{
+            display: block;
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            ul{
+                display: flex;
+                justify-content: space-between;
+                background: var(--background);
+                background: red;
+                align-items: center;
+                padding: 10px 30px;
+            }
+            .open{
+                width: 100%;
+                background: var(--background);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+        }
+    }
+`
     return(
         <>
         <NavbarStyled>
@@ -67,7 +104,7 @@ const NavbarStyled = styled.nav`
                         </Link> 
                     </li>
                     <li>
-                        <Link href='/'>
+                        <Link href='https://github.com/Jeff-Erson44' target="_blank">
                             <Image
                                 src="/images/icone/github.svg"
                                 alt="Github"
@@ -78,6 +115,44 @@ const NavbarStyled = styled.nav`
                     </li>
                 </ul>
             </nav>
+            <nav className="navbar__mobile">
+                <ul>
+                    <li>
+                        <Link href='/'>
+                            Jefferson.K © 2023
+                        </Link>
+                    </li>
+                    <li onClick={handleNavbar}>
+                        {isOpen ? 
+                            <Image
+                                src="/images/icone/menu.svg"
+                                alt="close"
+                                width={18}
+                                height={18}
+                            /> : <Image
+                                src="/images/icone/close.svg"
+                                alt="menu"
+                                width={18}
+                                height={18}
+                            />
+                        }
+                    </li>
+                </ul>
+                <div className={isOpen ? 'open' : ''}>
+                    <ul>
+                        <li>
+                            <Link href='/'>
+                                À propos
+                            </Link> 
+                        </li>
+                        <li>
+                            <Link href='/'>
+                                Contact
+                            </Link> 
+                        </li>
+                    </ul>
+                </div>
+            </nav>  
         </NavbarStyled>
         </>
     )
