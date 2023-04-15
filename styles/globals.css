@@ -19,5 +19,6 @@
 }
 
 p, a{
+    font-family: 'Poppins'!important;
     color : var(--body);
 }

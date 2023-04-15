@@ -3,14 +3,6 @@ import Image from "next/image";
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function Navbar() {
-
-const [isOpen, setIsOpen] = useState(false);
-
-const handleNavbar = () => {
-    setIsOpen(!isOpen);
-}
-
 const NavbarStyled = styled.nav`
     .navbar{
         padding: 0 50px;
@@ -53,21 +45,49 @@ const NavbarStyled = styled.nav`
                 display: flex;
                 justify-content: space-between;
                 background: var(--background);
-                background: red;
                 align-items: center;
                 padding: 10px 30px;
+                padding-top: 30px;
             }
-            .open{
-                width: 100%;
-                background: var(--background);
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: -1;
+            &--link{
+                height: 100vh;
+                background: red;
+                transition: transform .7s ease-in-out;
+                transform: translateX(100%);
+                ul{
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 50vh;
+                    li{
+                        a{
+                            font-size: 3.5rem;
+                            font-weight: 500;
+                            text-transform: uppercase;
+                            color: var(--body);
+                        }
+                    }
+                }
+                p{
+                    margin-left: -10px;
+                    width: 100%;
+                    text-align: end;
+                }
+            }
+            &--link.open{
+                transform: translateX(0%);
             }
         }
     }
 `
+export default function Navbar() {
+
+const [isOpen, setIsOpen] = useState(false);
+
+const handleNavbar = () => {
+    setIsOpen(!isOpen);
+}
+
+
     return(
         <>
         <NavbarStyled>
@@ -81,12 +101,12 @@ const NavbarStyled = styled.nav`
                 </ul>
                 <ul>
                     <li>
-                        <Link href='/'>
+                        <Link href='/apropos'>
                             À propos
                         </Link> 
                     </li>
                     <li>
-                        <Link href='/'>
+                        <Link href='/contact'>
                             Contact
                         </Link> 
                     </li>
@@ -138,20 +158,43 @@ const NavbarStyled = styled.nav`
                         }
                     </li>
                 </ul>
-                <div className={isOpen ? 'open' : ''}>
-                    <ul>
-                        <li>
-                            <Link href='/'>
-                                À propos
-                            </Link> 
-                        </li>
-                        <li>
-                            <Link href='/'>
-                                Contact
-                            </Link> 
-                        </li>
-                    </ul>
-                </div>
+                {isOpen ? 
+                    <div className="navbar__mobile--link">
+                        <ul>
+                            <li>
+                                <Link href='/apropos'>
+                                    À propos
+                                </Link> 
+                            </li>
+                            <li>
+                                <Link href='/contact'>
+                                    Contact
+                                </Link> 
+                            </li>
+                        </ul>
+                        <p>
+                            ©Jefferson.K 2023
+                        </p>
+                    </div>
+                    :
+                    <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
+                        <ul>
+                            <li>
+                                <Link href='/apropos'>
+                                    À propos
+                                </Link> 
+                            </li>
+                            <li>
+                                <Link href='/contact'>
+                                    Contact
+                                </Link> 
+                            </li>
+                        </ul>
+                        <p>
+                            ©Jefferson.K 2023
+                        </p>
+                    </div>
+                }
             </nav>  
         </NavbarStyled>
         </>
