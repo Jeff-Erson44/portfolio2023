@@ -13,6 +13,10 @@ const ScrollStyle = styled.div`
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
+
+    @media(max-width: 768px){
+        display: none;
+    }
 `
 
 export default function ScrollToTop (){

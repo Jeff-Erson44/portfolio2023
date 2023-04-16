@@ -1,10 +1,5 @@
 import Head from 'next/head'
-import styled from 'styled-components'
-
-const HomeStyle = styled.div`
-  background: green;
-  height: 100vh;
-`
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
@@ -12,11 +7,7 @@ export default function Home() {
       <Head>
         <title>Jefferson K. - Portfolio</title>
       </Head>
-        <h1>Jefferson K.</h1>
-        <HomeStyle>
-          <div className='test'>
-          </div>  
-        </HomeStyle>
+      <Hero/>
     </>
   )
 }
