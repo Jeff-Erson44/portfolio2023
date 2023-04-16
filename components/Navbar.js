@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NavbarStyled = styled.nav`
     .navbar{
@@ -51,9 +51,8 @@ const NavbarStyled = styled.nav`
             }
             &--link{
                 height: 100vh;
-                background: red;
-                transition: transform .7s ease-in-out;
-                transform: translateX(100%);
+                transition: transform 1s ease-in-out;
+                transform: translateX(0%);
                 ul{
                     flex-wrap: wrap;
                     width: 100%;
@@ -74,7 +73,7 @@ const NavbarStyled = styled.nav`
                 }
             }
             &--link.open{
-                transform: translateX(0%);
+                transform: translateX(100%);
             }
         }
     }
@@ -82,6 +81,10 @@ const NavbarStyled = styled.nav`
 export default function Navbar() {
 
 const [isOpen, setIsOpen] = useState(false);
+
+useEffect(() => {
+    setIsOpen(false);
+}, []);
 
 const handleNavbar = () => {
     setIsOpen(!isOpen);
@@ -145,12 +148,12 @@ const handleNavbar = () => {
                     <li onClick={handleNavbar}>
                         {isOpen ? 
                             <Image
-                                src="/images/icone/menu.svg"
+                                src="/images/icone/close.svg"
                                 alt="close"
                                 width={18}
                                 height={18}
                             /> : <Image
-                                src="/images/icone/close.svg"
+                                src="/images/icone/menu.svg"
                                 alt="menu"
                                 width={18}
                                 height={18}
@@ -158,8 +161,8 @@ const handleNavbar = () => {
                         }
                     </li>
                 </ul>
-                {isOpen ? 
-                    <div className="navbar__mobile--link">
+                {!isOpen ? 
+                    <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
                         <ul>
                             <li>
                                 <Link href='/apropos'>
@@ -177,7 +180,7 @@ const handleNavbar = () => {
                         </p>
                     </div>
                     :
-                    <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
+                    <div className={'navbar__mobile--link'}>
                         <ul>
                             <li>
                                 <Link href='/apropos'>
