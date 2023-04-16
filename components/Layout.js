@@ -1,4 +1,5 @@
 import Navbar from './Navbar'
+import ScrollToTop from './ScrollToTop'
 
 export default function Layout({ children }) {
     return (
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
         <>
             <Navbar />
             { children }
+            <ScrollToTop/>
         </>
     </>
     )
