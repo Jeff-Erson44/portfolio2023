@@ -51,7 +51,7 @@ const NavbarStyled = styled.nav`
             }
             &--link{
                 height: 100vh;
-                transition: transform 1s ease-in-out;
+                transition: transform .8s ease-in-out;
                 transform: translateX(0%);
                 ul{
                     flex-wrap: wrap;
