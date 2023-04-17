@@ -18,7 +18,7 @@ const HeroStyle = styled.section`
     h3{
         font-size: 3.75rem;
         color: var(--secondary-color);
-        margin-bottom: 200px;
+        margin-bottom: 250px;
     }
     .hero{
         max-width: 100%;
