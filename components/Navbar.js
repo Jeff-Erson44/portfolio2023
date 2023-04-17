@@ -58,11 +58,12 @@ const NavbarStyled = styled.nav`
                     width: 100%;
                     height: 50vh;
                     li{
+                        color: var(--body)!important;
                         a{
                             font-size: 3.5rem;
                             font-weight: 500;
                             text-transform: uppercase;
-                            color: var(--body);
+                            color: var(--body)!important;
                         }
                     }
                 }

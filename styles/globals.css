@@ -22,6 +22,7 @@
 body{
     font-family: 'Poppins'!important;
     color : var(--body);
+    background: var(--background)
 }
 a:visited, a:link{
     color: var(--body);

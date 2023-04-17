@@ -27,6 +27,17 @@ const HeroStyle = styled.section`
             width: 50%;
             margin-left: 50%;
             transform: translateX(-25%);
+            &::before{
+                content: 'Creative Web';
+                font-size: 8rem;
+                position: absolute;
+                z-index: -1;
+                left: -20%;
+                top: -20%;
+                color: var(--secondary-color);
+                opacity: .25;
+                white-space: nowrap;
+            }
             h2{
                 position: absolute;
                 z-index: -1;
