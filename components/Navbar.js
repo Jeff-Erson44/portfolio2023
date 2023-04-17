@@ -194,9 +194,6 @@ const handleNavbar = () => {
                                 </Link> 
                             </li>
                         </ul>
-                        <p>
-                            ©Jefferson.K 2023
-                        </p>
                     </div>
                 }
             </nav>  

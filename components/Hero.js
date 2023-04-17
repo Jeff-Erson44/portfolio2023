@@ -103,7 +103,7 @@ const HeroStyle = styled.section`
             width: 100%;
             transform: translate(0);
             h4{
-                font-size: 1.25rem;
+                font-size: 1.5rem;
             }
             h5{
                 font-size: .75rem;
