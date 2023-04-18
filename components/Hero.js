@@ -23,21 +23,11 @@ const HeroStyle = styled.section`
     .hero{
         max-width: 100%;
         margin-bottom: 250px;
+        overflow: hidden;
         &__intro{
             width: 50%;
             margin-left: 50%;
             transform: translateX(-25%);
-            &::before{
-                content: 'Creative Web';
-                font-size: 8rem;
-                position: absolute;
-                z-index: -1;
-                left: -20%;
-                top: -20%;
-                color: var(--secondary-color);
-                opacity: .25;
-                white-space: nowrap;
-            }
             h2{
                 position: absolute;
                 z-index: -1;
@@ -46,6 +36,16 @@ const HeroStyle = styled.section`
             h4{
                 font-size: 4rem;
                 margin-bottom: 8px;
+            }
+            &--highlight{
+                position: absolute;
+                z-index: -1;
+                color: var(--secondary-color);
+                opacity: .15;
+                top: -30%;
+                left: -5%;
+                font-size: 12rem!important;
+                white-space: nowrap;
             }
             h5{
                 margin-bottom: 45px;
@@ -111,9 +111,19 @@ const HeroStyle = styled.section`
             p{
                 padding: 0 30px 0 0;
                 margin: 0 0 35px 0;
-                font-size: .8rem;
+                font-size: 1rem;
                 text-align: left;
                 line-height: 20px;
+            }
+            &--highlight{
+                position: absolute;
+                z-index: -1;
+                color: var(--secondary-color);
+                opacity: .15;
+                top: -15%;
+                left: -5%;
+                font-size: 6rem!important;
+                white-space: nowrap;
             }
         }
     }
@@ -135,6 +145,7 @@ export default function Hero(){
                 <p className="scroll">Scroll</p>
                 <div className="hero__intro">
                     <h4>Jefferson Kouao</h4>
+                    <h4 className="hero__intro--highlight">Creative Web</h4>
                     <h5>Jefferson Kouao</h5>
                     <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.</p>
                     <div className="button__seeMore">
