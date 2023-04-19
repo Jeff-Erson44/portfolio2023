@@ -176,9 +176,6 @@ const handleNavbar = () => {
                                 </Link> 
                             </li>
                         </ul>
-                        <p>
-                            ©Jefferson.K 2023
-                        </p>
                     </div>
                     :
                     <div className={'navbar__mobile--link'}>

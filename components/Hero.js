@@ -76,7 +76,7 @@ const HeroStyle = styled.section`
     margin: 0 30px;
     h1{
         padding-top: 200px;
-        font-size: 3.25rem;
+        font-size: 3rem;
         margin-bottom: 25px;
     }
     h2{
@@ -120,9 +120,9 @@ const HeroStyle = styled.section`
                 z-index: -1;
                 color: var(--secondary-color);
                 opacity: .15;
-                top: -15%;
+                top: -20%;
                 left: -5%;
-                font-size: 6rem!important;
+                font-size: 7rem!important;
                 white-space: nowrap;
             }
         }
