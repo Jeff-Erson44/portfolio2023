@@ -111,9 +111,9 @@ const HeroStyle = styled.section`
             p{
                 padding: 0 30px 0 0;
                 margin: 0 0 35px 0;
-                font-size: 1rem;
+                font-size: .8rem;
                 text-align: left;
-                line-height: 20px;
+                line-height: 24px;
             }
             &--highlight{
                 position: absolute;
