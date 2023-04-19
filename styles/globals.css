@@ -1,8 +1,8 @@
 :root{
-    --mb30 : margin-bottom:30px;
-    --mb50 : margin-bottom:50px;
-    --mb100 : margin-bottom:100px;
-    --mb150 : margin-bottom:150px;
+    --mb30 : 30px;
+    --mb50 : 50px;
+    --mb100 : 100px;
+    --mb150 : 150px;
 
     --body : hsl(0, 0%, 5%);
     --background : hsl(0, 0%, 99%);
