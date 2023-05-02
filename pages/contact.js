@@ -16,6 +16,7 @@ const ContactStyle = styled.div`
         display: flex;
         padding: 0 20%;
         justify-content: space-between;
+        margin-bottom: var(--mb100);
         &--left{
             width: 25%;
             h3{
@@ -45,7 +46,6 @@ const ContactStyle = styled.div`
         }
         &--right{
             width: 70%;
-            background: orange;
         }
     }
     @media(max-width:768px){
@@ -81,9 +81,8 @@ export default function Contact(){
                 <h2>Contact</h2>
                 <div className="container__contact">
                     <div className="container__contact--left">
-                        
                         <h3>Ville</h3>
-                        <p>Paris Ile-de-France</p>
+                        <p>Paris <br/> Île-de-France</p>
                         <h3>Contact</h3>
                         <p>jeffersonk.pro@gmail.com</p>
                         <h3>Réseaux Sociaux</h3>
@@ -114,7 +113,12 @@ export default function Contact(){
                         </p>
                     </div>
                     <div className="container__contact--right">
-
+                        <Image 
+                            src="/images/contact__illustration.png" 
+                            width={700} 
+                            height={450} 
+                            alt="Jefferson K. - Développeur Web" 
+                        />
                     </div>
                 </div>
             </section>

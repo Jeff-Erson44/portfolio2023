@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { useState, useEffect } from "react";
 
 const NavbarStyled = styled.nav`
+
     .navbar{
         padding: 0 50px;
         display: flex;
@@ -105,7 +106,7 @@ const handleNavbar = () => {
                 </ul>
                 <ul>
                     <li>
-                        <Link href='/apropos'>
+                        <Link href='/about'>
                             À propos
                         </Link> 
                     </li>
@@ -166,7 +167,7 @@ const handleNavbar = () => {
                     <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
                         <ul>
                             <li>
-                                <Link href='/apropos'>
+                                <Link href='/about'>
                                     À propos
                                 </Link> 
                             </li>
