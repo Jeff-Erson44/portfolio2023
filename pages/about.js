@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Link from "next/link"
+import Head from "next/head"
 
 const AboutStyle = styled.div`
     .container__about{
@@ -129,10 +130,12 @@ const AboutStyle = styled.div`
     }
 `
 
-
 export default function Index(){
     return(
         <>
+        <Head>
+            <title>Jefferson K. - À propos</title>
+        </Head>
         <AboutStyle>
         <section className="container__about">
             <div className="container__about--title">

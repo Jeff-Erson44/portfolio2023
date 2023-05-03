@@ -6,10 +6,15 @@ import { useState, useEffect } from "react";
 const NavbarStyled = styled.nav`
 
     .navbar{
-        padding: 0 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: space-between;
-        margin: 50px 0 200px 0;
+        width: -webkit-fill-available;
+        height: 10vh;
+        padding: 0 50px;
+        background: var(--background);
         ul{
             display: flex;
             gap: 36px;
@@ -182,7 +187,7 @@ const handleNavbar = () => {
                     <div className={'navbar__mobile--link'}>
                         <ul>
                             <li>
-                                <Link href='/apropos'>
+                                <Link href='/about'>
                                     À propos
                                 </Link> 
                             </li>
