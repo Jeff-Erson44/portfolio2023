@@ -5,16 +5,21 @@ import { useState, useEffect } from "react";
 
 const NavbarStyled = styled.nav`
 
+    .navbar__mobile{
+        display: none;
+    }
+
     .navbar{
-        position: fixed;
-        top: 0;
-        left: 0;
         display: flex;
-        justify-content: space-between;
-        width: -webkit-fill-available;
         height: 10vh;
         padding: 0 50px;
         background: var(--background);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        justify-content: space-between!important;
+        width: -webkit-fill-available;
         ul{
             display: flex;
             gap: 36px;
@@ -34,17 +39,15 @@ const NavbarStyled = styled.nav`
             }
         }
     }
-    .navbar__mobile{
-        display: none;
-    }
-
     @media screen and (max-width: 768px){
         .navbar{
             display: none;
         }
         .navbar__mobile{
-            display: block;
             position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
             z-index: 99;
             width: 100%;
             ul{
@@ -125,22 +128,26 @@ const handleNavbar = () => {
                     </li>
                     <li>
                         <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
-                            <Image
-                                src="/images/icone/linkedin.svg"
-                                alt="LinkedIn"
-                                width={18}
-                                height={18}
-                            />
+                            <>
+                                <Image
+                                    src="/images/icone/linkedin.svg"
+                                    alt="LinkedIn"
+                                    width={18}
+                                    height={18}
+                                />
+                            </>
                         </Link> 
                     </li>
                     <li>
                         <Link href='https://github.com/Jeff-Erson44' target="_blank">
-                            <Image
-                                src="/images/icone/github.svg"
-                                alt="Github"
-                                width={18}
-                                height={18}
-                            />
+                            <>
+                                <Image
+                                    src="/images/icone/github.svg"
+                                    alt="Github"
+                                    width={18}
+                                    height={18}
+                                />
+                            </>
                         </Link> 
                     </li>
                 </ul>

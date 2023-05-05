@@ -1,11 +1,13 @@
 import styled from "styled-components"
 import Link from "next/link"
 import Head from "next/head"
+import Image from "next/image"
 
 const AboutStyle = styled.div`
     .container__about{
         display: flex;
         margin-bottom: var(--mb150);
+        margin-top: var(--mb100);
         &--title{   
             width: 50%;
             margin-left: 5%;
@@ -81,9 +83,8 @@ const AboutStyle = styled.div`
         }
         &--image{
             margin-top: var(--mb100);
-            height: 500px;
             width: 380px;
-            background: orange;
+            height: 570px;
         }
     }
 
@@ -158,7 +159,7 @@ export default function Index(){
                 Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs.</p>
                 <div className="container__profil--contact">
                     <h4>Ville</h4>
-                    <p>Paris <br/> Île-de-France</p>
+                    <p>Paris &bull; Île-de-France</p>
                     <h4>Contact</h4>
                     <p>jeffersonk.pro@gmail.com</p>
                     <h4>Réseaux Sociaux</h4>
@@ -190,11 +191,12 @@ export default function Index(){
                 </div>
             </div>
             <div className="container__profil--image">
-                {/* <Image
-                    src=""
-                    alt=''
-                    width
-                /> */}
+                <Image
+                    src={'/images/moi.jpg'}
+                    alt="moi"
+                    width={390}
+                    height={570}
+                />
             </div>
         </section>
         </AboutStyle>
