@@ -23,6 +23,7 @@ const HeroStyle = styled.section`
     .hero{
         max-width: 100%;
         margin-bottom: 250px;
+        margin-top: 150px;
         overflow: hidden;
         &__intro{
             width: 50%;

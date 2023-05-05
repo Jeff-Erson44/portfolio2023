@@ -22,6 +22,6 @@
     }
 }
 </style>
-<path d="M1 11L11 1" stroke="var(--body)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="var(--body)"/>
-<path d="M1 1H11V11" stroke="var(--body)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="var(--body)"/>
+<path d="M1 11L11 1" stroke="var(--body)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 1H11V11" stroke="var(--body)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
