@@ -157,38 +157,38 @@ export default function Index(){
                 <h5>Jefferson Kouao</h5>
                 <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.
                 Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs.</p>
-                <div className="container__profil--contact">
-                    <h4>Ville</h4>
-                    <p>Paris &bull; Île-de-France</p>
-                    <h4>Contact</h4>
-                    <p>jeffersonk.pro@gmail.com</p>
-                    <h4>Réseaux Sociaux</h4>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            LinkedIn
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            Github
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            Behance
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            Instagram
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            Malt
-                        </Link>
-                    </p>
-                </div>
+                <div className="container__contact--left">
+                        <h3>Ville</h3>
+                        <p>Paris <br/> Île-de-France</p>
+                        <h3>Contact</h3>
+                        <p>jeffersonk.pro@gmail.com</p>
+                        <h3>Réseaux Sociaux</h3>
+                        <p className="link__social">
+                            <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
+                                LinkedIn
+                            </Link>
+                        </p>
+                        <p className="link__social">
+                            <Link href='https://github.com/Jeff-Erson44' target="_blank">
+                                Github
+                            </Link>
+                        </p>
+                        <p className="link__social">
+                            <Link href='https://www.behance.net/Jefferson-Kouao' target="_blank">
+                                Behance
+                            </Link>
+                        </p>
+                        <p className="link__social">
+                            <Link href='https://www.instagram.com/jeffersonk._/' target="_blank">
+                                Instagram
+                            </Link>
+                        </p>
+                        <p className="link__social">
+                            <Link href='' target="_blank">
+                                Malt
+                            </Link>
+                        </p>
+                    </div>
             </div>
             <div className="container__profil--image">
                 <Image

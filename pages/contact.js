@@ -87,22 +87,22 @@ export default function Contact(){
                         <p>jeffersonk.pro@gmail.com</p>
                         <h3>Réseaux Sociaux</h3>
                         <p className="link__social">
-                            <Link href='' target="_blank">
+                            <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
                                 LinkedIn
                             </Link>
                         </p>
                         <p className="link__social">
-                            <Link href='' target="_blank">
+                            <Link href='https://github.com/Jeff-Erson44' target="_blank">
                                 Github
                             </Link>
                         </p>
                         <p className="link__social">
-                            <Link href='' target="_blank">
+                            <Link href='https://www.behance.net/Jefferson-Kouao' target="_blank">
                                 Behance
                             </Link>
                         </p>
                         <p className="link__social">
-                            <Link href='' target="_blank">
+                            <Link href='https://www.instagram.com/jeffersonk._/' target="_blank">
                                 Instagram
                             </Link>
                         </p>
