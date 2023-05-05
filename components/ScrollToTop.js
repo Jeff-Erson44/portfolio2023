@@ -5,7 +5,7 @@ const ScrollStyle = styled.div`
     position: fixed;
     right: 50px;
     bottom: 50px;
-    background: var(--background-dark);
+    background: var(--body);
     width: 60px;
     height: 60px;
     display: flex;
@@ -13,7 +13,6 @@ const ScrollStyle = styled.div`
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
-
     @media(max-width: 768px){
         display: none;
     }

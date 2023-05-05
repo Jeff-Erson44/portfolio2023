@@ -1,4 +1,27 @@
 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26 2L2 26" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2 2L26 26" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<style>
+    :root{
+    --mb30 : 30px;
+    --mb50 : 50px;
+    --mb100 : 100px;
+    --mb150 : 150px;
+
+    --body : hsl(0, 0%, 5%);
+    --background : hsl(0, 0%, 99%);
+
+    --body-dark : hsl(0, 0%, 99%);
+    --background-dark : hsl(0, 0%, 5%);
+
+    --secondary-color : hsl(0, 0%, 80%);
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --background : var(--background-dark);
+        --body : var(--body-dark);
+    }
+}
+</style>
+<path d="M26 2L2 26" stroke="var(--body)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 2L26 26" stroke="var(--body)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
