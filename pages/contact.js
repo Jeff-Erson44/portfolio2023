@@ -10,6 +10,7 @@ const ContactStyle = styled.div`
         text-transform: uppercase;
         margin-left: 5%;
         margin-bottom: 80px;
+        margin-top: var(--mb100);
         color: var(--body);
     }
     .container__contact{
@@ -50,7 +51,7 @@ const ContactStyle = styled.div`
     }
     @media(max-width:768px){
         h2{
-            padding-top: var(--mb150);
+            padding-top: var(--mb100);
             font-size: 3rem;
             font-weight: 400;
         }

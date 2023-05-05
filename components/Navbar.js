@@ -178,12 +178,12 @@ const handleNavbar = () => {
                 {!isOpen ? 
                     <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
                         <ul>
-                            <li>
+                            <li onClick={handleNavbar}>
                                 <Link href='/about'>
                                     À propos
                                 </Link> 
                             </li>
-                            <li>
+                            <li onClick={handleNavbar}>
                                 <Link href='/contact'>
                                     Contact
                                 </Link> 
@@ -193,12 +193,12 @@ const handleNavbar = () => {
                     :
                     <div className={'navbar__mobile--link'}>
                         <ul>
-                            <li>
+                            <li onClick={handleNavbar}>
                                 <Link href='/about'>
                                     À propos
                                 </Link> 
                             </li>
-                            <li>
+                            <li onClick={handleNavbar}>
                                 <Link href='/contact'>
                                     Contact
                                 </Link> 
