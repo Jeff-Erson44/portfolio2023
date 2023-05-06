@@ -115,6 +115,9 @@ export default function Contact(){
                             Malt
                             </Link>
                         </div>
+                        <Link href={'https://www.instagram.com/jeffersonk._/'}>
+                            <a target="_blank">Click this link</a>
+                        </Link>
                     </div>
                     <div className="container__contact--right">
                         <Image 
