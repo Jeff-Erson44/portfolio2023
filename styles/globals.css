@@ -24,6 +24,7 @@ body{
     color : var(--body);
     background: var(--background);
 }
+
 a:visited, a:link{
     color: var(--body);
 }

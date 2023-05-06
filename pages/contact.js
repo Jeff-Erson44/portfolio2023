@@ -84,9 +84,11 @@ export default function Contact(){
                 <div className="container__contact">
                     <div className="container__contact--left">
                         <h3>Ville</h3>
-                        <p>Paris <br/> Île-de-France</p>
+                        <p>Paris &bull; Île-de-France</p>
                         <h3>Contact</h3>
-                        <p mailto='jeffersonk.pro@gmail.com'>jeffersonk.pro@gmail.com</p>
+                        <p>
+                        <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
+                        </p>
                         <h3>Réseaux Sociaux</h3>
                         <p className="link__social">
                             <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">

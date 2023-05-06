@@ -161,7 +161,9 @@ export default function Index(){
                     <h4>Ville</h4>
                     <p>Paris &bull; Île-de-France</p>
                     <h4>Contact</h4>
-                    <p>jeffersonk.pro@gmail.com</p>
+                    <p>
+                        <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
+                    </p>
                     <h4>Réseaux Sociaux</h4>
                     <p className="link__social">
                         <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">

@@ -59,15 +59,16 @@ const NavbarStyled = styled.nav`
                 padding-top: 30px;
             }
             &--link{
-                height: 100vh;
                 transition: transform .8s ease-in-out;
                 transform: translateX(0%);
                 ul{
-                    flex-wrap: wrap;
-                    width: 100%;
-                    height: 50vh;
+                    display: block;
+                    height: 100vh;
+                    background: red;
+                    padding-top: var(--mb100);
                     li{
                         color: var(--body)!important;
+                        margin-bottom: var(--mb100);
                         a{
                             font-size: 3.5rem;
                             font-weight: 500;
