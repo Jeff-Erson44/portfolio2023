@@ -86,35 +86,35 @@ export default function Contact(){
                         <h3>Ville</h3>
                         <p>Paris &bull; Île-de-France</p>
                         <h3>Contact</h3>
-                        <p>
-                        <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
-                        </p>
+                        <div className="link__social">
+                            <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
+                        </div>
                         <h3>Réseaux Sociaux</h3>
-                        <p className="link__social">
+                        <div className="link__social">
                             <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
-                                LinkedIn
+                            LinkedIn
                             </Link>
-                        </p>
-                        <p className="link__social">
+                        </div>
+                        <div className="link__social">
                             <Link href='https://github.com/Jeff-Erson44' target="_blank">
-                                Github
+                            Github
                             </Link>
-                        </p>
-                        <p className="link__social">
+                        </div>
+                        <div className="link__social">
                             <Link href='https://www.behance.net/Jefferson-Kouao' target="_blank">
-                                Behance
+                            Behance
                             </Link>
-                        </p>
-                        <p className="link__social">
+                        </div>
+                        <div className="link__social">
                             <Link href='https://www.instagram.com/jeffersonk._/' target="_blank">
-                                Instagram
+                            Instagram
                             </Link>
-                        </p>
-                        <p className="link__social">
+                        </div>
+                        <div className="link__social">
                             <Link href='' target="_blank">
-                                Malt
+                            Malt
                             </Link>
-                        </p>
+                        </div>
                     </div>
                     <div className="container__contact--right">
                         <Image 
