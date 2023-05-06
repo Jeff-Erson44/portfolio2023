@@ -73,28 +73,6 @@ const ContactStyle = styled.div`
 `
 
 export default function Contact(){
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [status, setStatus] = useState(null);
-    
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-    
-        try {
-        const response = await fetch('/api/sendEmail', {
-            method: 'POST',
-            body: JSON.stringify({ email, message }),
-            headers: {
-            'Content-Type': 'application/json',
-            },
-        });
-        const data = await response.json();
-        setStatus(data.message);
-        } catch (error) {
-        console.error(error);
-        setStatus('Error sending email');
-        }
-    };
     return(
         <>
         <Head>
@@ -146,21 +124,6 @@ export default function Contact(){
                     </div>
                 </div>
             </section>
-            <form onSubmit={handleSubmit}>
-                <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                />
-                <textarea
-                placeholder="Message"
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
-                />
-                <button type="submit">Send</button>
-                {status && <p>{status}</p>}
-            </form>
         </ContactStyle>
         </>
     )
