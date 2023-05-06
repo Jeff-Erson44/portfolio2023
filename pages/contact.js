@@ -2,6 +2,7 @@ import Link from "next/link"
 import styled from "styled-components"
 import Head from "next/head"
 import Image from "next/image"
+import { useState } from "react"
 
 const ContactStyle = styled.div`
     h2{
@@ -72,6 +73,28 @@ const ContactStyle = styled.div`
 `
 
 export default function Contact(){
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState(null);
+    
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+        const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            body: JSON.stringify({ email, message }),
+            headers: {
+            'Content-Type': 'application/json',
+            },
+        });
+        const data = await response.json();
+        setStatus(data.message);
+        } catch (error) {
+        console.error(error);
+        setStatus('Error sending email');
+        }
+    };
     return(
         <>
         <Head>
@@ -85,7 +108,7 @@ export default function Contact(){
                         <h3>Ville</h3>
                         <p>Paris <br/> Île-de-France</p>
                         <h3>Contact</h3>
-                        <p>jeffersonk.pro@gmail.com</p>
+                        <p mailto='jeffersonk.pro@gmail.com'>jeffersonk.pro@gmail.com</p>
                         <h3>Réseaux Sociaux</h3>
                         <p className="link__social">
                             <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
@@ -123,6 +146,21 @@ export default function Contact(){
                     </div>
                 </div>
             </section>
+            <form onSubmit={handleSubmit}>
+                <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                />
+                <textarea
+                placeholder="Message"
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                />
+                <button type="submit">Send</button>
+                {status && <p>{status}</p>}
+            </form>
         </ContactStyle>
         </>
     )
