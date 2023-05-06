@@ -64,11 +64,14 @@ const NavbarStyled = styled.nav`
                 ul{
                     display: block;
                     height: 100vh;
-                    background: red;
                     padding-top: var(--mb100);
                     li{
                         color: var(--body)!important;
                         margin-bottom: var(--mb100);
+                        &:last-of-type{
+                            position: absolute;
+                            bottom: var(--mb100);
+                        }
                         a{
                             font-size: 3.5rem;
                             font-weight: 500;
@@ -189,6 +192,7 @@ const handleNavbar = () => {
                                     Contact
                                 </Link> 
                             </li>
+                            <li>@Jefferson.K 2023</li>
                         </ul>
                     </div>
                     :
@@ -204,6 +208,7 @@ const handleNavbar = () => {
                                     Contact
                                 </Link> 
                             </li>
+                            <li>@Jefferson.K 2023</li>
                         </ul>
                     </div>
                 }
