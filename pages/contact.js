@@ -107,7 +107,7 @@ export default function Contact(){
                         </div>
                         <div className="link__social">
                             <Link href='https://www.instagram.com/jeffersonk._/' target="_blank">
-                            Instagram
+                                <a>Instagram </a>
                             </Link>
                         </div>
                         <div className="link__social">
