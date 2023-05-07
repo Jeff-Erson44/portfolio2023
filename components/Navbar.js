@@ -48,57 +48,48 @@ const NavbarStyled = styled.nav`
             top: 0;
             left: 0;
             display: block;
-            z-index: 20;
             width: 100%;
+            z-index: 9;
             ul{
                 display: flex;
                 justify-content: space-between;
-                background: var(--background);
                 align-items: center;
                 padding: 10px 30px;
                 padding-top: 30px;
+                background: var(--background);
             }
-            &--link{
-                transition: transform .8s ease-in-out;
-                transform: translateX(0%);
-                ul{
-                    display: block;
-                    height: 100vh;
-                    padding-top: var(--mb100);
-                    li{
-                        color: var(--body)!important;
-                        margin-bottom: var(--mb100);
-                        &:last-of-type{
-                            position: absolute;
-                            bottom: var(--mb100);
-                        }
-                        a{
-                            font-size: 3.5rem;
-                            font-weight: 500;
-                            text-transform: uppercase;
-                            color: var(--body)!important;
-                        }
-                    }
-                }
-                p{
-                    margin-left: -10px;
-                    width: 100%;
-                    text-align: end;
+        }
+        .menu__slide{
+            height: 100vh;
+            background: var(--background);
+            transform: translateX(0%);
+            padding: 0 30px;
+            transition: .7s ease-in-out;
+            p{
+                margin-bottom: var(--mb100);
+                font-size: 3.75rem;
+                text-transform: uppercase;
+                &:first-of-type{
+                    padding-top: var(--mb50);
                 }
             }
-            &--link.open{
+            &--open{
                 transform: translateX(100%);
+            }
+            .copyright{
+                font-size: .75rem!important;
+                text-transform: capitalize;
+                position: absolute;
+                bottom: 0px;
+                right: 20px;
             }
         }
     }
+
 `
 export default function Navbar() {
 
 const [isOpen, setIsOpen] = useState(false);
-
-useEffect(() => {
-    setIsOpen(false);
-}, []);
 
 const handleNavbar = () => {
     setIsOpen(!isOpen);
@@ -157,7 +148,7 @@ const handleNavbar = () => {
             </nav>
             <nav className="navbar__mobile">
                 <ul>
-                    <li>
+                    <li onClick={handleNavbar}>
                         <Link href='/'>
                             Jefferson.K © 2023
                         </Link>
@@ -178,47 +169,43 @@ const handleNavbar = () => {
                         }
                     </li>
                 </ul>
-                {!isOpen ? 
-                    <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
-                        <ul>
-                            <li onClick={handleNavbar}>
-                                <Link href='/'>
-                                    Accueil
-                                </Link> 
-                            </li>
-                            <li onClick={handleNavbar}>
-                                <Link href='/about'>
-                                    À propos
-                                </Link> 
-                            </li>
-                            <li onClick={handleNavbar}>
-                                <Link href='/contact'>
-                                    Contact
-                                </Link> 
-                            </li>
-                            <li>@Jefferson.K 2023</li>
-                        </ul>
+                {isOpen ?
+                    <div className={`menu__slide${isOpen ? '':''}`}>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/'}>
+                                Accueil
+                            </Link>
+                        </p>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/about'}>
+                                À propos
+                            </Link>
+                        </p>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/contact'}>
+                                Contact
+                            </Link>
+                        </p>
+                        <p className="copyright">@Jefferson.K 2023</p>
                     </div>
-                    :
-                    <div className={'navbar__mobile--link'}>
-                        <ul>
-                            <li onClick={handleNavbar}>
-                                <Link href='/'>
-                                    Accueil
-                                </Link> 
-                            </li>
-                            <li onClick={handleNavbar}>
-                                <Link href='/about'>
-                                    À propos
-                                </Link> 
-                            </li>
-                            <li onClick={handleNavbar}>
-                                <Link href='/contact'>
-                                    Contact
-                                </Link> 
-                            </li>
-                            <li>@Jefferson.K 2023</li>
-                        </ul>
+                    :   
+                    <div className={`menu__slide${isOpen ? '':'--open'}`}>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/'}>
+                                Accueil
+                            </Link>
+                        </p>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/about'}>
+                                À propos
+                            </Link>
+                        </p>
+                        <p onClick={handleNavbar}>
+                            <Link href={'/contact'}>
+                                Contact
+                            </Link>
+                        </p>
+                        <p className="copyright">@Jefferson.K 2023</p>
                     </div>
                 }
             </nav>  
