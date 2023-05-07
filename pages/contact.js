@@ -26,7 +26,7 @@ const ContactStyle = styled.div`
                 text-transform: uppercase;
                 font-weight: 500;
                 line-height: 24px;
-                margin-bottom: 10px;
+                margin: 30px 0 15px;
                 &:nth-child(1){
                     &::before{
                     display: flex;

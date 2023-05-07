@@ -183,6 +183,11 @@ const handleNavbar = () => {
                     <div className={`navbar__mobile--link ${isOpen ? '' : 'open'}`}>
                         <ul>
                             <li onClick={handleNavbar}>
+                                <Link href='/'>
+                                    Accueil
+                                </Link> 
+                            </li>
+                            <li onClick={handleNavbar}>
                                 <Link href='/about'>
                                     À propos
                                 </Link> 
@@ -198,6 +203,11 @@ const handleNavbar = () => {
                     :
                     <div className={'navbar__mobile--link'}>
                         <ul>
+                            <li onClick={handleNavbar}>
+                                <Link href='/'>
+                                    Accueil
+                                </Link> 
+                            </li>
                             <li onClick={handleNavbar}>
                                 <Link href='/about'>
                                     À propos
