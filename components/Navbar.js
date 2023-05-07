@@ -48,7 +48,7 @@ const NavbarStyled = styled.nav`
             top: 0;
             left: 0;
             display: block;
-            z-index: 99;
+            z-index: 20;
             width: 100%;
             ul{
                 display: flex;
@@ -103,7 +103,6 @@ useEffect(() => {
 const handleNavbar = () => {
     setIsOpen(!isOpen);
 }
-
 
     return(
         <>
