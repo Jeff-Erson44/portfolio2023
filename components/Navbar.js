@@ -170,7 +170,7 @@ const handleNavbar = () => {
                     </li>
                 </ul>
                 {isOpen ?
-                    <div className={`menu__slide${isOpen ? '':''}`}>
+                    <div className={`menu__slide`}>
                         <p onClick={handleNavbar}>
                             <Link href={'/'}>
                                 Accueil

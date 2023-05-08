@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import Link from "next/link"
 import Head from "next/head"
 import Image from "next/image"
+import Contact from "/components/Contact"
 
 const AboutStyle = styled.div`
     .container__about{
@@ -38,7 +38,6 @@ const AboutStyle = styled.div`
         &--title{
             width: 15%;
             h3{
-                font-size: 2.5rem;
                 text-transform: uppercase;
                 margin-bottom: 10px;
             }
@@ -51,7 +50,6 @@ const AboutStyle = styled.div`
             padding: 0;
             margin-top: var(--mb100);
             h3{
-                font-size: 2.5rem;
                 margin-bottom: 8px;
             }
             h5{
@@ -60,31 +58,16 @@ const AboutStyle = styled.div`
             }
             p{
                 line-height: 28px;
-                margin-bottom: var(--mb100);
                 padding-right: 15%;
             }
-        }
-        &--contact{
-            h4{
-                color: var(--secondary-color);
-                text-transform: uppercase;
-                font-weight: 500;
-                line-height: 24px;
-                margin-bottom: 10px;
-            }
-            p{
-                font-weight: 500;
-                color: var(--body);
-                margin-bottom: 30px;
-            }
-            .link__social{
-                margin-bottom: 15px;
-            }
-        }
+        }            
         &--image{
             margin-top: var(--mb100);
             width: 380px;
             height: 570px;
+        }
+        &--contact{
+            margin-top: var(--mb100);
         }
     }
 
@@ -127,6 +110,9 @@ const AboutStyle = styled.div`
             &--image{
                 display: none;
             }
+            &--contact{
+                margin-left: 30px;
+            }
         }
     }
 `
@@ -158,38 +144,7 @@ export default function Index(){
                 <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.
                 Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs.</p>
                 <div className="container__profil--contact">
-                    <h4>Ville</h4>
-                    <p>Paris &bull; Île-de-France</p>
-                    <h4>Contact</h4>
-                    <p>
-                        <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
-                    </p>
-                    <h4>Réseaux Sociaux</h4>
-                    <p className="link__social">
-                        <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
-                            LinkedIn
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='https://github.com/Jeff-Erson44' target="_blank">
-                            Github
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='https://www.behance.net/Jefferson-Kouao' target="_blank">
-                            Behance
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='https://www.instagram.com/jeffersonk._/' target="_blank">
-                            Instagram
-                        </Link>
-                    </p>
-                    <p className="link__social">
-                        <Link href='' target="_blank">
-                            Malt
-                        </Link>
-                    </p>
+                    <Contact/>
                 </div>
             </div>
             <div className="container__profil--image">
