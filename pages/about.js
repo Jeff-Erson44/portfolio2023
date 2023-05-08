@@ -53,6 +53,7 @@ const AboutStyle = styled.div`
             margin-top: var(--mb100);
             h3{
                 margin-bottom: 8px;
+                font-size: 1.5rem;
             }
             h5{
                 opacity: .5;
@@ -89,6 +90,7 @@ const AboutStyle = styled.div`
                 line-height: 24px;
                 padding: 0 30px;
                 width: 100%;
+                margin: -30px 0;
                 h4{
                     font-weight: 500;
                 }
@@ -99,8 +101,9 @@ const AboutStyle = styled.div`
             padding: 0 30px;
             &--title{
                 width: 100%;
+                margin-bottom: -var(--mb50);
                 h3{
-                    font-size: 2rem;
+                    font-size: 1.25rem;
                 }
                 h4{
                     font-size: 0.875rem;
@@ -108,6 +111,9 @@ const AboutStyle = styled.div`
             }
             &--info{
                 width: 100%;
+                h3{
+                    font-size: 1.25rem;
+                }
             }
             &--image{
                 display: none;

@@ -9,6 +9,7 @@ const ContactContainerStyle = styled.div`
         font-weight: 500;
         line-height: 24px;
         margin: 30px 0 15px;
+        font-size: 1.125rem!important;
         &:nth-child(1){
             &::before{
             display: flex;

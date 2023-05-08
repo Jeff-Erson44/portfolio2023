@@ -22,6 +22,6 @@
     }
 }
 </style>
-<path d="M2 2L32.5 40.6791" stroke="var(--background-dark)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M32.5 11.5113V40.6792H9.5" stroke="var(--background-dark)" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M2 2L32.5 40.6791" stroke="var(--body)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.5 11.5113V40.6792H9.5" stroke="var(--body)" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
 </svg>
