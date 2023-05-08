@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Head from "next/head"
 import Image from "next/image"
-import Contact from "/components/Contact"
+import ContactContainer from "/components/ContactContainer"
 
 const ContactStyle = styled.div`
     h2{
@@ -41,7 +41,7 @@ const ContactStyle = styled.div`
     }
 `
 
-export default function ContactPage(){
+export default function ContactPage({socials}){
     return(
         <>
         <Head>
@@ -52,7 +52,9 @@ export default function ContactPage(){
                 <h2>Contact</h2>
                 <div className="container__contact">
                     <div className="container__contact--left">
-                        <Contact/>
+                        <ContactContainer 
+                            socials={socials}
+                        />
                     </div>
                     <div className="container__contact--right">
                         <Image 
@@ -67,4 +69,36 @@ export default function ContactPage(){
         </ContactStyle>
         </>
     )
+}
+
+export async function getStaticProps(){
+
+    const socials = [
+        {
+            link: "https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/",
+            name: "LinkedIn",
+        },
+        {
+            link: "https://github.com/Jeff-Erson44",
+            name: "Github",
+        },
+        {
+            link: "",
+            name: "Malt",
+        },
+        {
+            link: "https://www.behance.net/Jefferson-Kouao",
+            name: "Behance",
+        },
+        {
+            link: "https://www.instagram.com/jeffersonk._/",
+            name: "Instagram",
+        },
+        
+    ]
+    return{
+        props: {
+            socials,
+        }
+    }
 }

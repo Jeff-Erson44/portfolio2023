@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import Head from "next/head"
 import Image from "next/image"
-import Contact from "/components/Contact"
+import ContactContainer from "/components/ContactContainer"
 
 const AboutStyle = styled.div`
     .container__about{
@@ -40,8 +40,10 @@ const AboutStyle = styled.div`
             h3{
                 text-transform: uppercase;
                 margin-bottom: 10px;
+                font-size: 2rem;
             }
             h4{
+                font-size: 1.5rem;
                 opacity: .5;
             }
         }
@@ -117,7 +119,7 @@ const AboutStyle = styled.div`
     }
 `
 
-export default function Index(){
+export default function Index({socials, bio}){
     return(
         <>
         <Head>
@@ -141,17 +143,18 @@ export default function Index(){
             <div className="container__profil--info">
                 <h3>Jefferson Kouao</h3>
                 <h5>Jefferson Kouao</h5>
-                <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.
-                Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs.</p>
+                <p>{bio?.text}</p>
                 <div className="container__profil--contact">
-                    <Contact/>
+                    <ContactContainer 
+                        socials={socials}
+                    />
                 </div>
             </div>
             <div className="container__profil--image">
                 <Image
                     src={'/images/moi.jpg'}
                     alt="moi"
-                    width={390}
+                    width={430}
                     height={570}
                 />
             </div>
@@ -159,4 +162,42 @@ export default function Index(){
         </AboutStyle>
         </>
     )
+}
+
+
+export async function getStaticProps(){
+
+    const socials = [
+        {
+            link: "https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/",
+            name: "LinkedIn",
+        },
+        {
+            link: "https://github.com/Jeff-Erson44",
+            name: "Github",
+        },
+        {
+            link: "",
+            name: "Malt",
+        },
+        {
+            link: "https://www.behance.net/Jefferson-Kouao",
+            name: "Behance",
+        },
+        {
+            link: "https://www.instagram.com/jeffersonk._/",
+            name: "Instagram",
+        },
+        
+    ]
+    const bio = {
+        text: "Je m'appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d'expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies. Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs."
+    }
+    
+    return{
+        props: {
+            socials, 
+            bio
+        }
+    }
 }
