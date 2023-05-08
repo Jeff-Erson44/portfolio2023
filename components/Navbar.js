@@ -54,9 +54,12 @@ const NavbarStyled = styled.nav`
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 10px 30px;
-                padding-top: 30px;
-                background: var(--background);
+                padding: 20px 20px;
+                padding-top: 20px;
+                background: white;
+                a{
+                    color: black!important;
+                }
             }
         }
         .menu__slide{
