@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Image from "next/image"
+import Link from "next/link"
 
 const HeroStyle = styled.section`
     margin-left: 10rem;
@@ -72,6 +73,7 @@ const HeroStyle = styled.section`
     .scroll{
         display: none;
     }
+
 
 @media (max-width: 768px){
     margin: 0 30px;
@@ -150,7 +152,7 @@ export default function Hero(){
                     <h5>Jefferson Kouao</h5>
                     <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.</p>
                     <div className="button__seeMore">
-                        <a href={'/about'} target="_blank">Voir plus</a>
+                        <Link href={'/about'} target="_blank">Voir plus</Link>
                         <Image
                             src={'/images/icone/Arrow-diag.svg'}
                             alt='fleche'

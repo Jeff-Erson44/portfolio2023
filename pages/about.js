@@ -197,7 +197,7 @@ export async function getStaticProps(){
         
     ]
     const bio = {
-        text: "Je m'appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d'expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies. Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs."
+        text: "Je m'appelle Jefferson, 23 ans basé à Paris. Avec plus de 2 ans d'expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies. Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs."
     }
     
     return{

@@ -11,7 +11,7 @@ const NavbarStyled = styled.nav`
 
     .navbar{
         display: flex;
-        height: 10vh;
+        height: 8vh;
         padding: 0 50px;
         background: var(--background);
         position: fixed;
