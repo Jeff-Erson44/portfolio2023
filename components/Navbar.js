@@ -69,11 +69,11 @@ const NavbarStyled = styled.nav`
             padding: 0 30px;
             transition: .7s ease-in-out;
             p{
-                margin-bottom: var(--mb100);
+                margin-bottom: var(--m100);
                 font-size: 3.75rem;
                 text-transform: uppercase;
                 &:first-of-type{
-                    padding-top: var(--mb50);
+                    padding-top: var(--m50);
                 }
             }
             &--open{

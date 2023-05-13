@@ -6,8 +6,8 @@ import ContactContainer from "/components/ContactContainer"
 const AboutStyle = styled.div`
     .container__about{
         display: flex;
-        margin-bottom: var(--mb150);
-        margin-top: var(--mb100);
+        margin-bottom: var(--m150);
+        margin-top: var(--m100);
         &--title{   
             width: 50%;
             margin-left: 5%;
@@ -21,8 +21,8 @@ const AboutStyle = styled.div`
             padding: 0 10%;
             p{
                 font-size: 1.125rem;
-                margin-top: var(--mb100);
-                margin-bottom: var(--mb50);
+                margin-top: var(--m100);
+                margin-bottom: var(--m50);
                 line-height: 27px;
                 font-style: italic;
             }
@@ -50,14 +50,14 @@ const AboutStyle = styled.div`
         &--info{
             width: 40%;
             padding: 0;
-            margin-top: var(--mb100);
+            margin-top: var(--m100);
             h3{
                 margin-bottom: 8px;
                 font-size: 1.5rem;
             }
             h5{
                 opacity: .5;
-                margin-bottom: var(--mb30);
+                margin-bottom: var(--m30);
             }
             p{
                 line-height: 28px;
@@ -65,12 +65,12 @@ const AboutStyle = styled.div`
             }
         }            
         &--image{
-            margin-top: var(--mb100);
+            margin-top: var(--m100);
             width: 380px;
             height: 570px;
         }
         &--contact{
-            margin-top: var(--mb100);
+            margin-top: var(--m100);
         }
     }
 
@@ -79,10 +79,10 @@ const AboutStyle = styled.div`
             flex-wrap: wrap;
             &--title{
                 width: 100%;
-                margin-bottom: var(--mb50);
+                margin-bottom: var(--m50);
                 h2{
                     font-size: 3rem;
-                    margin-top : var(--mb100);
+                    margin-top : var(--m100);
                 }
             }
             &--citation{
@@ -101,7 +101,7 @@ const AboutStyle = styled.div`
             padding: 0 30px;
             &--title{
                 width: 100%;
-                margin-bottom: -var(--mb50);
+                margin-bottom: -var(--m50);
                 h3{
                     font-size: 1.25rem;
                 }

@@ -10,21 +10,21 @@ const ContactStyle = styled.div`
         text-transform: uppercase;
         margin-left: 5%;
         margin-bottom: 80px;
-        margin-top: var(--mb100);
+        margin-top: var(--m100);
         color: var(--body);
     }
     .container__contact{
         display: flex;
         padding: 0 20%;
         justify-content: space-between;
-        margin-bottom: var(--mb100);
+        margin-bottom: var(--m100);
         &--right{
             width: 70%;
         }
     }
     @media(max-width:768px){
         h2{
-            padding-top: var(--mb100);
+            padding-top: var(--m100);
             font-size: 3rem;
             font-weight: 400;
         }
@@ -35,7 +35,7 @@ const ContactStyle = styled.div`
             &--right{
                 width: 100%;
                 height: var(--100);
-                margin-bottom: var(--mb100);
+                margin-bottom: var(--m100);
             }
         }
     }

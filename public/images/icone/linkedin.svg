@@ -1,10 +1,10 @@
 <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
     :root{
-    --mb30 : 30px;
-    --mb50 : 50px;
-    --mb100 : 100px;
-    --mb150 : 150px;
+    --m30 : 30px;
+    --m50 : 50px;
+    --m100 : 100px;
+    --m150 : 150px;
 
     --body : hsl(0, 0%, 5%);
     --background : hsl(0, 0%, 99%);

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import LinkSocial from "/components/LinkSocial"
+import Link from "next/link"
 
 const ContactContainerStyle = styled.div`
     width: 100%;
@@ -37,7 +38,7 @@ export default function ContactContainer({socials}){
                 <p>Paris &bull; Île-de-France</p>
                 <h3>Contact</h3>
                 <div className="link__social">
-                    <a href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</a>
+                    <Link href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</Link>
                 </div>
                 <h3>Réseaux Sociaux</h3>
                 <LinkSocial 
