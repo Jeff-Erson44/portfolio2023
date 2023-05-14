@@ -26,7 +26,7 @@ export default function ProjetDetail({projet}){
     return(
         <>
         <div>{title}</div> 
-        <p>{documentToReactComponents(description)}</p>
+        <h3>{documentToReactComponents(description)}</h3>
         </>
     )
 }
@@ -37,6 +37,7 @@ export async function getStaticProps({ params }){
         content_type: 'projet',
         'fields.slug' : params.slug
     })
+
     return {
         props : { projet : items[0]},
         revalidate: 1
