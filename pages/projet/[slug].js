@@ -1,10 +1,14 @@
+import DetailProjet from '@/components/DetailProjet'
 import { createClient } from 'contentful'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import Head from 'next/head'
+
+
+
+
 const client = createClient({
     space: process.env.NEXT_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_CONTENTFUL_ACCESTOKEN_KEY,
 })
-
 export const getStaticPaths = async () =>{
     const res = await client.getEntries({
         content_type: 'projet'
@@ -21,23 +25,31 @@ export const getStaticPaths = async () =>{
 }
 
 export default function ProjetDetail({projet}){
+
     console.log(projet);
-    const { title, client, type, year, description, thumbnail, detailImage, squareImage, squareImage2, bannerImage, customImage, link } = projet.fields
+    const { title
+        } = projet.fields
+
     return(
         <>
-        <div>{title}</div> 
-        <h3>{documentToReactComponents(description)}</h3>
+        <Head>
+            <title>Jefferson.K - {title}</title>
+        </Head>
+        <DetailProjet projet={projet} />
         </>
     )
 }
 
-export async function getStaticProps({ params }){
 
+
+
+
+
+export async function getStaticProps({ params }){
     const {items} = await client.getEntries({
         content_type: 'projet',
         'fields.slug' : params.slug
     })
-
     return {
         props : { projet : items[0]},
         revalidate: 1
