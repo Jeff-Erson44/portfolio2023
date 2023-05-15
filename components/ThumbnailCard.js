@@ -7,6 +7,11 @@ const ThumbnailCardStyle = styled.div`
         display: flex;
         justify-content: flex-end;
     }
+    @media(max-width: 768px){
+        &:nth-child(odd){
+            justify-content: center;
+        }
+    }
     .container{
         margin: 0 10rem;
         display: flex;
@@ -16,6 +21,7 @@ const ThumbnailCardStyle = styled.div`
             margin-bottom: var(--m100);
             &--image{
                 margin-bottom: 30px;
+                cursor: pointer;
             }
             &--info{
                 h2{
@@ -29,6 +35,24 @@ const ThumbnailCardStyle = styled.div`
             justify-content: space-between;
             margin-bottom: 15px;
         } 
+    }
+
+    @media (max-width: 768px){
+        .container{
+            margin: 0 30px;
+            width: fit-content;
+            &__thumbnail{
+                justify-content: center;
+                &--info{
+                    p{
+                        font-size: 0.875rem;
+                    }
+                    h2{
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+        }
     }
 `
 
