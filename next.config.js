@@ -11,6 +11,7 @@ module.exports = {
     styledComponents: true
   }, 
   images: {
-    domains: ['images.ctfassets.net'],
+    domains: ['images.ctfassets.net', 'videos.ctfassets.net'],
   }
+
 }

@@ -2,12 +2,14 @@ import styled from "styled-components"
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Link from 'next/link'
 import Image from 'next/image'
+import Galerie from "./Galerie"
 
 
 const DetailProjetStyle = styled.div`
     .container{
         margin: 0 10rem;
         margin-top: var(--m150);
+        margin-bottom: var(--m200);
         &__detail{
             &--info{
                 display: flex;
@@ -64,8 +66,8 @@ const DetailProjetStyle = styled.div`
 
 export default function DetailProjet({projet}){
     const { title, client, year, description, 
-        bannImage, squareImage, squareImage2,
-        bannerImage, customImage, link 
+        bannImage, link, squareImage, squareImage2, bannerImage,
+        customImage
     } = projet.fields
 
     return(
@@ -114,6 +116,7 @@ export default function DetailProjet({projet}){
                     </div>
                 </div>
             </section>
+            <Galerie projet={projet}/>
         </DetailProjetStyle>
     )
 }
