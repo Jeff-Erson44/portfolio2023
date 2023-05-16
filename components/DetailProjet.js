@@ -10,20 +10,48 @@ const DetailProjetStyle = styled.div`
         margin-top: var(--m150);
         &__detail{
             &--info{
-                background: orange;
                 display: flex;
                 &-text{
                     width: 50%;
-                    background: red;
-                    display: flex;
-                    .info-projet{
-                        background: green;
-                        width: 50%;
-                        h2{
-                            font-size: 1.125rem;
-                            color: var(--secondary-color);
+                    h2{
+                        font-size: 1.125rem;
+                        color: var(--secondary-color);
+                        margin-bottom: 8px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        letter-spacing: 1px;
+                    }
+                    h3{
+                        margin-bottom: 80px;
+                    }
+                    .info{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 100px;
+                        margin-bottom: 80px;
+                        &-projet{
+                            p{
+                                font-size: 1.25rem;
+                            }
                         }
                     }
+                    .link{
+                        display: flex;
+                        gap: 8px;
+                        background: var(--body);
+                        padding: 15px 20px;
+                        width: fit-content;
+                        border-radius: 10px;
+                        a{
+                        color: var(--background)!important;                      
+                        }
+                    }
+                }
+                &-image{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
                 }
             }
         }
@@ -47,28 +75,39 @@ export default function DetailProjet({projet}){
                 <div className="container__detail">
                     <div className="container__detail--info">
                         <div className="container__detail--info-text">
-                            <div className="info-projet">
-                                <h2>Client</h2>
-                                <p>{client}</p>
-                            </div>
-                            <div className="info-projet">
-                                <h2>Année</h2>
-                                <p>{year}</p>
+                            <div className="info">
+                                <div className="info-projet">
+                                    <h2>Client</h2>
+                                    <p>{client}</p>
+                                </div>
+                                <div className="info-projet">
+                                    <h2>Année</h2>
+                                    <p>{year}</p>
+                                </div>
                             </div>
                             <h2>Description</h2>
                             <h3>{documentToReactComponents(description)}</h3>
-                            <Link 
-                                href={link} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                >Voir le site
-                            </Link>
+                            <div className="link">
+                                <Link
+                                    href={link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    >Voir le site
+                                </Link>
+                                <Image 
+                                    src={'/images/icone/Arrow-diagwhite.svg'}
+                                    height={10}
+                                    width={10}
+                                    alt=''
+                                />
+                            </div>
+                            
                         </div>
                         <div className="container__detail--info-image">
                             <Image
                                 src={'https:' + bannImage.fields.file.url}
-                                width={450}
-                                height={270}
+                                width={540}
+                                height={360}
                                 alt='image détail'
                             />
                         </div>

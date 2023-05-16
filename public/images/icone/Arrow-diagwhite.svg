@@ -1,0 +1,27 @@
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+    :root{
+    --m30 : 30px;
+    --m50 : 50px;
+    --m100 : 100px;
+    --m150 : 150px;
+
+    --body : hsl(0, 0%, 5%);
+    --background : hsl(0, 0%, 99%);
+
+    --body-dark : hsl(0, 0%, 99%);
+    --background-dark : hsl(0, 0%, 5%);
+
+    --secondary-color : hsl(0, 0%, 80%);
+}
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --background : var(--background-dark);
+        --body : var(--body-dark);
+    }
+}
+</style>
+<path d="M1 11L11 1" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 1H11V11" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

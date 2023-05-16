@@ -10,18 +10,9 @@
     --body : hsl(0, 0%, 5%);
     --background : hsl(0, 0%, 99%);
 
-    --body-dark : hsl(0, 0%, 99%);
-    --background-dark : hsl(0, 0%, 5%);
-
     --secondary-color : hsl(0, 0%, 80%);
 }
 
-@media(prefers-color-scheme: dark){
-    :root{
-        --background : var(--background-dark);
-        --body : var(--body-dark);
-    }
-}
 body{
     font-family: 'Poppins'!important;
     color : var(--body);
