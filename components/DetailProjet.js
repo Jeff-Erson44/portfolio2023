@@ -48,6 +48,11 @@ const DetailProjetStyle = styled.div`
                         color: var(--background)!important;                      
                         }
                     }
+                    .description{
+                        color: red;
+                        line-height: 24px;
+                        letter-spacing: normal;
+                    }
                 }
                 &-image{
                     display: flex;
@@ -61,6 +66,33 @@ const DetailProjetStyle = styled.div`
     h1{
         font-size: 5.25rem;
         margin-bottom: var(--m50);
+    }
+    @media(max-width: 768px){
+        .container{
+            margin: 0 30px;
+            &__detail{
+                flex-direction: row-reverse;
+                &--info{
+                    flex-wrap: wrap;
+                    flex-direction: column-reverse;
+                    &-image{
+                        margin-bottom: var(--m50);
+                    }
+                    &-text{
+                        width: 100%;
+                        .info{
+                            flex-wrap: nowrap;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+        h1{
+            margin-top: var(--m100);
+            font-size: 2rem;
+            margin-bottom: var(--m50);
+        }
     }
 `
 
@@ -88,7 +120,7 @@ export default function DetailProjet({projet}){
                                 </div>
                             </div>
                             <h2>Description</h2>
-                            <h3>{documentToReactComponents(description)}</h3>
+                            <h3 className="description">{documentToReactComponents(description)}</h3>
                             <div className="link">
                                 <Link
                                     href={link} 

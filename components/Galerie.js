@@ -20,6 +20,12 @@ const GalerieStyle = styled.div`
                 border-radius: 10px;
             }
         }
+        &__custom{
+            video {
+                width: -webkit-fill-available;
+                height: 750px;
+            }
+        }
     }
 `
 
@@ -46,6 +52,7 @@ export default function Galerie({projet}){
                     />
                 </div>
                 <div className="container__banner">
+                    {/* ajouter un parallax */}
                     <Image
                         src={'http:' + bannerImage.fields.file.url}
                         width={1940}
