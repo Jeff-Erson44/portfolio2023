@@ -49,7 +49,6 @@ const DetailProjetStyle = styled.div`
                         }
                     }
                     .description{
-                        color: red;
                         line-height: 24px;
                         letter-spacing: normal;
                     }
@@ -83,6 +82,9 @@ const DetailProjetStyle = styled.div`
                         .info{
                             flex-wrap: nowrap;
                             justify-content: space-between;
+                        }
+                        .link{
+                            margin-bottom: var(--m50);
                         }
                     }
                 }

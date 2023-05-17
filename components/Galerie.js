@@ -27,6 +27,24 @@ const GalerieStyle = styled.div`
             }
         }
     }
+    @media(max-width: 768px){
+        .container{
+            margin: 0 30px;
+            &__double{
+                flex-wrap: wrap;
+                gap: var(--m50);
+                margin-bottom: var(--m50);
+            }
+            &__banner{
+                margin-bottom: var(--m50);
+            }
+            &__custom{
+                video{
+                    display: none;
+                }
+            }
+        }
+    }
 `
 
 export default function Galerie({projet}){
