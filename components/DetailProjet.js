@@ -53,11 +53,11 @@ const DetailProjetStyle = styled.div`
                     }
                     .link img{
                         transform: translate(-10px, 10px);
-                        transition: .5s ease-in-out;
+                        transition: .4s ease-in-out;
                     }
                     .link:hover img{
                         transform: translate(0px, 0px);
-                        transition: .5s ease-in-out;
+                        transition: .4s ease-in-out;
                     }
                     .description{
                         line-height: 24px;
@@ -110,9 +110,9 @@ const DetailProjetStyle = styled.div`
 `
 
 export default function DetailProjet({projet}){
-    const { title, client, year, description, 
+    const { title, client, year, 
         bannImage, link, squareImage, squareImage2, bannerImage,
-        customImage
+        customImage, description
     } = projet.fields
 
     return(

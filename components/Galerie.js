@@ -50,7 +50,7 @@ const GalerieStyle = styled.div`
 
 export default function Galerie({projet}){
     const { squareImage, squareImage2, bannerImage,
-        customImage, customVideo
+        customImage, customVideo, description
     } = projet?.fields
     console.log(projet);
     return(

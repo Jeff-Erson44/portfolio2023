@@ -8,7 +8,7 @@ export default function Footer(){
     return(
         <FooterStyle>
             <section>
-                <p>© 2023 Jefferson.K</p>
+                <h2></h2>
             </section>
         </FooterStyle>
     )
