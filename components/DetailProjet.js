@@ -48,6 +48,17 @@ const DetailProjetStyle = styled.div`
                         color: var(--background)!important;                      
                         }
                     }
+                    .link {
+                        position: relative;
+                    }
+                    .link img{
+                        transform: translate(-10px, 10px);
+                        transition: .5s ease-in-out;
+                    }
+                    .link:hover img{
+                        transform: translate(0px, 0px);
+                        transition: .5s ease-in-out;
+                    }
                     .description{
                         line-height: 24px;
                         letter-spacing: normal;
@@ -137,7 +148,6 @@ export default function DetailProjet({projet}){
                                     alt=''
                                 />
                             </div>
-                            
                         </div>
                         <div className="container__detail--info-image">
                             <Image

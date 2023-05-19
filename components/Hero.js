@@ -68,6 +68,17 @@ const HeroStyle = styled.section`
                     font-weight: 600;
                 }
             }
+            .button__seeMore {
+                position: relative;
+            }
+            .button__seeMore img{
+                transform: translate(-10px, 10px);
+                transition: .5s ease-in-out;
+            }
+            .button__seeMore:hover img{
+                transform: translate(0px, 0px);
+                transition: .5s ease-in-out;
+            }
         }
     }
     .scroll{

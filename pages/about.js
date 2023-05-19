@@ -77,6 +77,7 @@ const AboutStyle = styled.div`
     @media (max-width: 768px){
         .container__about{
             flex-wrap: wrap;
+            margin-bottom: var(--m100);
             &--title{
                 width: 100%;
                 margin-bottom: var(--m50);
@@ -101,7 +102,7 @@ const AboutStyle = styled.div`
             padding: 0 30px;
             &--title{
                 width: 100%;
-                margin-bottom: -var(--m50);
+                margin-bottom: -50px!important;
                 h3{
                     font-size: 1.25rem;
                 }

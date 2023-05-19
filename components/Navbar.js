@@ -29,6 +29,7 @@ const NavbarStyled = styled.nav`
                 text-transform: uppercase;
                 font-family: 'Poppins';
                 font-weight: 400;
+                cursor: pointer;
             }
             &:first-child{
                 li{
