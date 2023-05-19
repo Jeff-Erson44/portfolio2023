@@ -23,7 +23,8 @@ const GalerieStyle = styled.div`
         &__custom{
             video {
                 width: -webkit-fill-available;
-                height: 750px;
+                height: -webkit-fill-available;
+                border-radius: 10px;
             }
         }
     }
