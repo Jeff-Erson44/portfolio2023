@@ -22,6 +22,9 @@ const ThumbnailCardStyle = styled.div`
             &--image{
                 margin-bottom: 30px;
                 cursor: pointer;
+                img{
+                    border-radius: 10px;
+                }
             }
             &--info{
                 h2{

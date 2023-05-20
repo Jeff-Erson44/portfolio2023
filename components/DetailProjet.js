@@ -69,6 +69,9 @@ const DetailProjetStyle = styled.div`
                     align-items: center;
                     justify-content: center;
                     margin: 0 auto;
+                    img{
+                        border-radius: 10px!important;
+                    }
                 }
             }
         }

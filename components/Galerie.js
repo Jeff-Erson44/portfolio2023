@@ -25,6 +25,8 @@ const GalerieStyle = styled.div`
             video {
                 width: -webkit-fill-available;
                 height: -webkit-fill-available;
+            }
+            img, video{
                 border-radius: 10px;
             }
         }
@@ -59,10 +61,11 @@ const GalerieStyle = styled.div`
                 display: flex;
                 position: relative;
                 overflow: hidden;
+                padding: 20px 0;
                 p{
                     position: relative;
                     transition: .5s ease-in-out;
-                    top: -50px;
+                    top: -100px;
                     font-size: 3rem;
                     color: #000;
                 }
@@ -163,7 +166,7 @@ export default function Galerie({projet}){
                 </div>
                 <div className="container__nextLink">
                     <div className="container__nextLink--subtitle">
-                        <Link href={"/projets/" + nextLink} >
+                        <Link href={"/projet/" + nextLink} >
                             <p>Projet suivant</p>
                         </Link>
                         <Image
