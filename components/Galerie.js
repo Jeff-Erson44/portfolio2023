@@ -47,7 +47,7 @@ const GalerieStyle = styled.div`
                     text-align: center;
                     color: #000;
                     opacity: .5;
-                    font-size: 1.25rem;
+                    font-size: 1.5rem;
                     transition: .5s ease-in-out;
                     &:hover{
                         transition: .5s ease-in-out;
@@ -84,6 +84,27 @@ const GalerieStyle = styled.div`
             &__custom{
                 video{
                     display: none;
+                }
+            }
+            &__nextLink{
+                display: block;
+                margin-top: var(--m100);
+                &--subtitle{
+                    justify-content: center;
+                    p{
+                        transition: none;
+                        text-align: center;
+                        &:hover{
+                        transition: none;
+                        }
+                    }
+                }
+                &--title{
+                    justify-content: center;
+                    margin-top: var(--m50);
+                    p{
+                        top: 0;
+                    }
                 }
             }
         }
@@ -153,7 +174,9 @@ export default function Galerie({projet}){
                         />
                     </div>
                     <div className="container__nextLink--title">
+                        <Link href={"/projets/" + nextLink} >
                             <p className="link">{nextLink}</p>
+                        </Link>
                     </div>
                 </div>
             </section>
