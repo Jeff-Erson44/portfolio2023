@@ -29,6 +29,9 @@ const GalerieStyle = styled.div`
             img, video{
                 border-radius: 10px;
             }
+            img{
+                object-fit: cover;
+            }
         }
         &__nextLink{
             cursor: pointer;    
@@ -158,8 +161,8 @@ export default function Galerie({projet}){
                         /> : 
                         <Image
                             src={'http:' + customImage.fields.file.url}
-                            width={1080}
-                            height={720}
+                            width={1750}
+                            height={1080}
                             alt=''
                         />
                     }
