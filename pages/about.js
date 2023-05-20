@@ -159,10 +159,11 @@ export default function Index({socials, bio}){
             </div>
             <div className="container__profil--image">
                 <Image
-                    src={'/images/moi.jpg'}
+                    src={'/images/moi.webp'}
                     alt="moi"
                     width={430}
                     height={570}
+                    priority={true}
                 />
             </div>
         </section>
@@ -198,8 +199,10 @@ export async function getStaticProps(){
         
     ]
     const bio = {
-        text: "Je m'appelle Jefferson, 23 ans basé à Paris. Avec plus de 2 ans d'expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies. Je suis déterminé à apporter ma contribution au monde numérique en créant des solutions ingénieuses. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour développer mes compétences et aider les entreprises à atteindre leurs objectifs."
-    }
+        text:
+          "Je suis Jefferson, développeur freelance basé à Paris. Je passionné par le monde numérique et les technologies innovantes. Avec une passion pour le développement web et une curiosité insatiable pour les dernières technologies, je suis toujours prêt à relever de nouveaux défis. Ma particularité réside dans la conception de sites web élégants, fonctionnels et conviviaux. Que ce soit pour des entreprises émergentes ou des marques établies, je mets tout en œuvre pour créer des expériences en ligne captivantes qui captent l'attention des utilisateurs.\n\nMais ce n'est pas tout ! Passionné par les nouvelles technologies, je m'intéresse également au monde fascinant de la blockchain et des cryptomonnaies.\n\nEn tant que freelance, j'apprécie la flexibilité et l'autonomie que cela me procure. Je suis toujours à la recherche de nouveaux défis et de projets stimulants pour continuer à développer mes compétences et élargir mes horizons. Mon engagement envers l'excellence me pousse à fournir des résultats exceptionnels à mes clients.\n\nSi vous recherchez un développeur passionné, créatif et fiable pour donner vie à vos idées, je suis là pour vous aider ! Ensemble, nous pouvons créer des solutions uniques et percutantes qui feront avancer votre entreprise dans le monde numérique. N'hésitez pas à me contacter dès maintenant pour discuter de votre projet et commencer cette aventure passionnante ensemble."
+      };
+      
     
     return{
         props: {

@@ -58,10 +58,11 @@ export default function ContactPage({socials}){
                     </div>
                     <div className="container__contact--right">
                         <Image 
-                            src="/images/contact__illustration.png" 
+                            src="/images/contact__illustration.webp" 
                             width={700} 
                             height={450} 
-                            alt="Jefferson K. - Développeur Web" 
+                            alt="Jefferson K. - Développeur Web"
+                            priority={true}
                         />
                     </div>
                 </div>

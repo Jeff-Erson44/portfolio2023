@@ -70,6 +70,7 @@ export default function ThumbnailCard({projet}) {
                                 alt='image illustratif, appelé thumbnail ou aperçu en cliquant dessus on arrive sur le détail du projet'
                                 width={650}
                                 height={420}
+                                priority={true}
                             />
                         </div>
                     </Link>
