@@ -174,7 +174,7 @@ export default function Galerie({projet}){
                         />
                     </div>
                     <div className="container__nextLink--title">
-                        <Link href={"/projets/" + nextLink} >
+                        <Link href={"/projet/" + nextLink} >
                             <p className="link">{nextLink}</p>
                         </Link>
                     </div>
