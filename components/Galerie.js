@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styled from "styled-components";
+import Link from "next/link";
 
 const GalerieStyle = styled.div`
     .container{
@@ -27,6 +28,47 @@ const GalerieStyle = styled.div`
                 border-radius: 10px;
             }
         }
+        &__nextLink{
+            cursor: pointer;    
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--subtitle{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-right: 10px;
+                &:hover + .container__nextLink--title .link{
+                    top: 0;
+                    transition: .5s ease-in-out;
+                }
+                p{
+                    text-align: center;
+                    color: #000;
+                    opacity: .5;
+                    font-size: 1.25rem;
+                    transition: .5s ease-in-out;
+                    &:hover{
+                        transition: .5s ease-in-out;
+                        margin-left: -35px;
+                    }
+                }
+            }
+            &--title{
+                display: flex;
+                position: relative;
+                overflow: hidden;
+                p{
+                    position: relative;
+                    transition: .5s ease-in-out;
+                    top: -50px;
+                    font-size: 3rem;
+                    color: #000;
+                }
+            }
+        }
+
     }
     @media(max-width: 768px){
         .container{
@@ -50,7 +92,7 @@ const GalerieStyle = styled.div`
 
 export default function Galerie({projet}){
     const { squareImage, squareImage2, bannerImage,
-        customImage, customVideo, description
+        customImage, customVideo, nextLink
     } = projet?.fields
     console.log(projet);
     return(
@@ -97,6 +139,22 @@ export default function Galerie({projet}){
                             alt=''
                         />
                     }
+                </div>
+                <div className="container__nextLink">
+                    <div className="container__nextLink--subtitle">
+                        <Link href={"/projets/" + nextLink} >
+                            <p>Projet suivant</p>
+                        </Link>
+                        <Image
+                            src={'/images/icone/grey_arrow.svg'}
+                            alt=''
+                            width={25}
+                            height={25} 
+                        />
+                    </div>
+                    <div className="container__nextLink--title">
+                            <p className="link">{nextLink}</p>
+                    </div>
                 </div>
             </section>
         </GalerieStyle>
