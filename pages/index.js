@@ -29,7 +29,8 @@ export async function getStaticProps (){
     accessToken: process.env.NEXT_CONTENTFUL_ACCESTOKEN_KEY,
   })
   const res = await client.getEntries({ 
-    content_type: 'projet'
+    content_type: 'projet',
+    // trier par ordre de nom
   })
   return {
     props: {

@@ -23,7 +23,11 @@ const ThumbnailCardStyle = styled.div`
                 margin-bottom: 30px;
                 cursor: pointer;
                 img{
-                    border-radius: 10px;
+                transition: 1.5s ease-in-out;
+                    &:hover{
+                        transition: 1.5s ease-in-out;
+                        transform: scale(1.05);
+                    }
                 }
             }
             &--info{
