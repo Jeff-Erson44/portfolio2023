@@ -12,9 +12,19 @@ const HeroStyle = styled.section`
     }
     h1{
         font-weight: 500;
+        overflow: hidden;
+        span{
+            display: block;
+            animation: fadeTitle 1.2s ease-in-out;
+        }
     }
     h2, h3{
         font-weight: 400;
+        overflow: hidden;
+        span{
+            display: block;
+            animation: fadeTitle 1.2s ease-in-out;
+        }
     }
     h3{
         font-size: 3.75rem;
@@ -85,6 +95,16 @@ const HeroStyle = styled.section`
         display: none;
     }
 
+    @keyframes fadeTitle {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+
+
 
 @media (max-width: 768px){
     margin: 0 30px;
@@ -153,9 +173,9 @@ export default function Hero(){
         <>
         <HeroStyle>
             <section className="hero">
-                <h1>K.Jefferson</h1>
-                <h2>Portfolio site.</h2>
-                <h3>Développeur basé à Paris</h3>
+                <h1><span>K.Jefferson</span></h1>
+                <h2><span>Portfolio site.</span></h2>
+                <h3><span>Développeur basé à Paris</span></h3>
                 <p className="scroll">Scroll</p>
                 <div className="hero__intro">
                     <h4>Jefferson Kouao</h4>

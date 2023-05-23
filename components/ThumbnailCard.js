@@ -81,7 +81,7 @@ export default function ThumbnailCard({projet}) {
                 cardRef.current.classList.add('active');
                 observer.unobserve(cardRef.current);
             }
-        },{threshold: 0.7})
+        },{threshold: 0.5})
         observer.observe(cardRef.current);
     }, [])
 
