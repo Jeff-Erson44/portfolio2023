@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import styled from "styled-components"
+import { useRef, useEffect } from "react"
 
 const ThumbnailCardStyle = styled.div`
     &:nth-child(odd){
@@ -19,6 +20,12 @@ const ThumbnailCardStyle = styled.div`
         &__thumbnail{
             text-transform: uppercase;
             margin-bottom: var(--m100);
+            opacity: 0;
+            transition: 1s ease-in-out;
+            &.active{
+                opacity: 1;
+                transition: 1s ease-in-out;
+            }
             &--image{
                 margin-bottom: 30px;
                 cursor: pointer;
@@ -63,13 +70,26 @@ const ThumbnailCardStyle = styled.div`
     }
 `
 
-
 export default function ThumbnailCard({projet}) {
     const { title, client, type, thumbnail, slug } = projet.fields
+
+    const cardRef = useRef();
+    useEffect(() =>{
+        const observer = new IntersectionObserver((entries) => {
+        console.log(entries);
+            if(entries[0].isIntersecting){
+                cardRef.current.classList.add('active');
+                observer.unobserve(cardRef.current);
+            }
+        },{threshold: 0.7})
+        observer.observe(cardRef.current);
+    }, [])
+
+
     return (
         <ThumbnailCardStyle>
             <section className="container">
-                <div className="container__thumbnail">
+                <div ref={cardRef} className="container__thumbnail">
                     <Link href={'/projet/' + slug}>
                         <div className="container__thumbnail--image">
                             <Image
