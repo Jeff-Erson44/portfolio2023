@@ -20,6 +20,7 @@ const NavbarStyled = styled.nav`
         z-index: 99;
         justify-content: space-between!important;
         width: -webkit-fill-available;
+        animation : slideIn 1s ease-in-out;
         ul{
             display: flex;
             gap: 36px;
@@ -87,6 +88,15 @@ const NavbarStyled = styled.nav`
                 bottom: 0px;
                 right: 20px;
             }
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
         }
     }
 

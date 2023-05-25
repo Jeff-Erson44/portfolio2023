@@ -24,6 +24,7 @@ const HeroStyle = styled.section`
         span{
             display: block;
             animation: fadeTitle 1.2s ease-in-out;
+            animation-delay: .2s;
         }
     }
     h3{
@@ -179,7 +180,7 @@ export default function Hero(){
                 <p className="scroll">Scroll</p>
                 <div className="hero__intro">
                     <h4>Jefferson Kouao</h4>
-                    <h4 className="hero__intro--highlight">Creative Web</h4>
+                    <h4 className="hero__intro--highlight"><span>Creative Web</span></h4>
                     <h5>Jefferson Kouao</h5>
                     <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.</p>
                     <div className="button__seeMore">
