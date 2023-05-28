@@ -1,6 +1,7 @@
 import Image from "next/image"
 import styled from "styled-components";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const GalerieStyle = styled.div`
     .container{
@@ -10,18 +11,29 @@ const GalerieStyle = styled.div`
             justify-content: space-between;
             margin-bottom: var(--m150);
             gap: 20px;
+            opacity: 0;
             img{
                 border-radius: 10px;
+            }
+            &.active{
+                opacity: 1;
+                transition: 1s ease-in-out;
             }
         }
         &__banner{
             margin-bottom: var(--m150);
+            opacity: 0;
             img{
                 object-fit: cover;
                 border-radius: 10px;
             }
+            &.active{
+                opacity: 1;
+                transition: 1s ease-in-out;
+            }
         }
         &__custom{
+            opacity: 0;
             video {
                 width: -webkit-fill-available;
                 height: -webkit-fill-available;
@@ -31,6 +43,10 @@ const GalerieStyle = styled.div`
             }
             img{
                 object-fit: cover;
+            }
+            &.active{
+                opacity: 1;
+                transition: 1s ease-in-out;
             }
         }
         &__nextLink{
@@ -122,10 +138,28 @@ export default function Galerie({projet}){
         customImage, customVideo, nextLink
     } = projet?.fields
     console.log(projet);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+            }
+        });
+        }, { threshold: 0.5 });
+    
+        const observedElements = document.querySelectorAll('.observe-me');
+        observedElements.forEach((element) => {
+        observer.observe(element);
+        });
+    }, []);
+
+
     return(
         <GalerieStyle>
             <section className="container">
-                <div className="container__double">
+                <div className="container__double observe-me">
                     <Image 
                         src={'https:' + squareImage.fields.file.url}
                         width={850}
@@ -139,7 +173,7 @@ export default function Galerie({projet}){
                         alt=""
                     />
                 </div>
-                <div className="container__banner">
+                <div className="container__banner observe-me">
                     {/* ajouter un parallax */}
                     <Image
                         src={'http:' + bannerImage.fields.file.url}
@@ -148,7 +182,7 @@ export default function Galerie({projet}){
                         alt=""
                     />
                 </div>
-                <div className="container__custom">
+                <div className="container__custom observe-me">
                     { customVideo ? 
                         <video
                             autoPlay
