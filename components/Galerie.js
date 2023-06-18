@@ -121,7 +121,6 @@ export default function Galerie({projet}){
     const { squareImage, squareImage2, bannerImage,
         customImage, customVideo, nextLink
     } = projet?.fields
-    console.log(projet);
     return(
         <GalerieStyle>
             <section className="container">

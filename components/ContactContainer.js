@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import LinkSocial from "/components/LinkSocial"
 import Link from "next/link"
+import Image from "next/image"
 
 const ContactContainerStyle = styled.div`
     width: 100%;
@@ -26,6 +27,29 @@ const ContactContainerStyle = styled.div`
         color: var(--body);
         margin-bottom: 30px;
     }
+    .link{
+        display: flex;
+        gap: 8px;
+        background: var(--body);
+        padding: 15px 20px;
+        width: fit-content;
+        border-radius: 10px;
+        margin: 30px 0;
+        a{
+        color: var(--background)!important;                      
+        }
+    }
+    .link {
+        position: relative;
+    }
+    .link img{
+        transform: translate(-10px, 10px);
+        transition: .4s ease-in-out;
+    }
+    .link:hover img{
+        transform: translate(0px, 0px);
+        transition: .4s ease-in-out;
+    }
 
 `
 
@@ -44,6 +68,21 @@ export default function ContactContainer({socials}){
                 <LinkSocial 
                     socials={socials}
                 />
+                <div className="link">
+                    <Link
+                        href="/images/mon_cv.pdf" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download={true}
+                        >Voir mon CV
+                    </Link>
+                    <Image 
+                        src={'/images/icone/Arrow-diagwhite.svg'}
+                        height={10}
+                        width={10}
+                        alt=''
+                    />
+                </div>
             </div>
         </ContactContainerStyle>
     )
