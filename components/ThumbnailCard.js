@@ -76,7 +76,6 @@ export default function ThumbnailCard({projet}) {
     const cardRef = useRef();
     useEffect(() =>{
         const observer = new IntersectionObserver((entries) => {
-        console.log(entries);
             if(entries[0].isIntersecting){
                 cardRef.current.classList.add('active');
                 observer.unobserve(cardRef.current);
