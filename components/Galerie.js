@@ -126,6 +126,7 @@ const GalerieStyle = styled.div`
                     margin-top: var(--m50);
                     p{
                         top: 0;
+                        font-size: 2.5rem;
                     }
                 }
             }
