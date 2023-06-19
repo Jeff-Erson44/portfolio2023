@@ -35,6 +35,18 @@ const DetailProjetStyle = styled.div`
                             p{
                                 font-size: 1.25rem;
                             }
+                            &--techno{
+                                p{
+                                    display: contents;
+                                    font-size: 1.25rem;
+                                }
+                                p::after{
+                                    content: ',  ';
+                                }
+                                p:last-child::after{
+                                    content: '';
+                                }
+                            }
                         }
                     }
                     .link{
@@ -115,7 +127,7 @@ const DetailProjetStyle = styled.div`
 export default function DetailProjet({projet}){
     const { title, client, year, 
         bannImage, link, squareImage, squareImage2, bannerImage,
-        customImage, description
+        customImage, description, techno
     } = projet.fields
 
     return(
@@ -133,6 +145,12 @@ export default function DetailProjet({projet}){
                                 <div className="info-projet">
                                     <h2>Année</h2>
                                     <p>{year}</p>
+                                </div>
+                                <div className="info-projet--techno">
+                                    <h2>Techno</h2>
+                                    {techno?.map((techno) => (
+                                        <p key={techno}>{techno}</p>
+                                    ))}
                                 </div>
                             </div>
                             <h2>Description</h2>

@@ -22,7 +22,6 @@ export default function Footer() {
     useEffect(() => {
         const interval = setInterval(() =>{
             const date = new Date();
-            const options = { timeZone: 'Europe/Paris' };
             const heures = date.getHours().toString().padStart(2, '0'); // Ajoute un zéro en tête si nécessaire
             const minutes = date.getMinutes().toString().padStart(2, '0'); // Ajoute un zéro en tête si nécessaire
             const heureActuelle = `${heures} : ${minutes}`;
