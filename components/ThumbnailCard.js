@@ -92,7 +92,7 @@ export default function ThumbnailCard({projet}) {
                     <Link href={'/projet/' + slug}>
                         <div className="container__thumbnail--image">
                             <Image
-                                src={'https:' +thumbnail.fields.file.url}
+                                src={'https:' +thumbnail?.fields.file.url}
                                 alt='image illustratif, appelé thumbnail ou aperçu en cliquant dessus on arrive sur le détail du projet'
                                 width={650}
                                 height={420}

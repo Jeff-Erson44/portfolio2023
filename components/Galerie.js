@@ -162,13 +162,13 @@ export default function Galerie({projet}){
             <section className="container">
                 <div className="container__double observe-me">
                     <Image 
-                        src={'https:' + squareImage.fields.file.url}
+                        src={'https:' + squareImage?.fields.file.url}
                         width={850}
                         height={560}
                         alt=""
                     />
                     <Image 
-                        src={'http:' + squareImage2.fields.file.url}
+                        src={'http:' + squareImage2?.fields.file.url}
                         width={850}
                         height={560}
                         alt=""
@@ -177,7 +177,7 @@ export default function Galerie({projet}){
                 <div className="container__banner observe-me">
                     {/* ajouter un parallax */}
                     <Image
-                        src={'http:' + bannerImage.fields.file.url}
+                        src={'http:' + bannerImage?.fields.file.url}
                         width={1940}
                         height={750}
                         alt=""
@@ -189,13 +189,13 @@ export default function Galerie({projet}){
                             autoPlay
                             muted
                             loop
-                            src={'http:' + customVideo.fields.file.url}
+                            src={'http:' + customVideo?.fields.file.url}
                             width={1080}
                             height={720}
                             alt=""
                         /> : 
                         <Image
-                            src={'http:' + customImage.fields.file.url}
+                            src={'http:' + customImage?.fields.file.url}
                             width={1750}
                             height={1080}
                             alt=''
