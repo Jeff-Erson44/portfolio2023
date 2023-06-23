@@ -10,6 +10,7 @@ const IndexStyle = styled.div`
 
 
 export default function Home({ projets }) {
+  console.log(projets);
   return (
     <IndexStyle>
       <Head>
@@ -30,6 +31,7 @@ export async function getStaticProps (){
   })
   const res = await client.getEntries({ 
     content_type: 'projet',
+    order: 'sys.createdAt'
     // trier par ordre de nom
   })
   return {
