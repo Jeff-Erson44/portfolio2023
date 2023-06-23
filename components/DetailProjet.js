@@ -154,7 +154,7 @@ export default function DetailProjet({projet}){
                         </div>
                         <div className="container__detail--info-image">
                             <Image
-                                src={'https:' + bannImage.fields.file.url}
+                                src={'https:' + bannImage?.fields.file.url}
                                 width={540}
                                 height={360}
                                 alt='image détail'
