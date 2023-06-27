@@ -123,7 +123,7 @@ const handleNavbar = () => {
                 <ul>
                     <li>
                         <Link href='/about'>
-                            À propos
+                            About
                         </Link> 
                     </li>
                     <li>
@@ -192,7 +192,7 @@ const handleNavbar = () => {
                         </p>
                         <p onClick={handleNavbar}>
                             <Link href={'/about'}>
-                                À propos
+                                About
                             </Link>
                         </p>
                         <p onClick={handleNavbar}>
@@ -211,7 +211,7 @@ const handleNavbar = () => {
                         </p>
                         <p onClick={handleNavbar}>
                             <Link href={'/about'}>
-                                À propos
+                                About
                             </Link>
                         </p>
                         <p onClick={handleNavbar}>

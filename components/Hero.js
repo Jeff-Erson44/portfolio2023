@@ -176,15 +176,15 @@ export default function Hero(){
             <section className="hero">
                 <h1><span>K.Jefferson</span></h1>
                 <h2><span>Portfolio site.</span></h2>
-                <h3><span>Développeur basé à Paris</span></h3>
+                <h3><span>Developer based in Paris</span></h3>
                 <p className="scroll">Scroll</p>
                 <div className="hero__intro">
                     <h4>Jefferson Kouao</h4>
                     <h4 className="hero__intro--highlight"><span>Creative Web</span></h4>
                     <h5>Jefferson Kouao</h5>
-                    <p>Je m&#39;appelle Jefferson, jeune développeur de 23 ans basé à Paris. Avec plus de 2 ans d&#39;expérience en tant que freelance, je suis passionné par le développement web et les technologies innovantes telles que la blockchain et les cryptomonnaies.</p>
+                    <p>My name is Jefferson, 23 years old developer based in Paris. With over 2 years of experience as a freelancer, I am passionate about web development and innovative technologies such as blockchain and cryptocurrencies.</p>
                     <div className="button__seeMore">
-                        <Link href={'/about'} target="_blank">Voir plus</Link>
+                        <Link href={'/about'} target="_blank">See more</Link>
                         <Image
                             src={'/images/icone/Arrow-diag.svg'}
                             alt='fleche'

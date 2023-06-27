@@ -58,13 +58,13 @@ export default function ContactContainer({socials}){
     return(
         <ContactContainerStyle>
             <div className="contact__container">
-                <h3>Ville</h3>
+                <h3>City</h3>
                 <p>Paris &bull; Île-de-France</p>
                 <h3>Contact</h3>
                 <div className="link__social">
                     <Link href="mailto:jeffersonk.pro@gmail.com">jeffersonk.pro@gmail.com</Link>
                 </div>
-                <h3>Réseaux Sociaux</h3>
+                <h3>Socials</h3>
                 <LinkSocial 
                     socials={socials}
                 />
@@ -74,7 +74,7 @@ export default function ContactContainer({socials}){
                         target="_blank"
                         rel="noopener noreferrer"
                         download={true}
-                        >Voir mon CV
+                        >See my resume
                     </Link>
                     <Image 
                         src={'/images/icone/Arrow-diagwhite.svg'}
