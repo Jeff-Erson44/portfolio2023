@@ -187,7 +187,7 @@ const handleNavbar = () => {
                     <div className={`menu__slide`}>
                         <p onClick={handleNavbar}>
                             <Link href={'/'}>
-                                Accueil
+                                Home
                             </Link>
                         </p>
                         <p onClick={handleNavbar}>
@@ -206,7 +206,7 @@ const handleNavbar = () => {
                     <div className={`menu__slide${isOpen ? '':'--open'}`}>
                         <p onClick={handleNavbar}>
                             <Link href={'/'}>
-                                Accueil
+                                Home
                             </Link>
                         </p>
                         <p onClick={handleNavbar}>
