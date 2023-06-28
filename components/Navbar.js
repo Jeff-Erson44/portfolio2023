@@ -131,33 +131,6 @@ const handleNavbar = () => {
                             Contact
                         </Link> 
                     </li>
-                    <li>
-                        |
-                    </li>
-                    <li>
-                        <Link href='https://www.linkedin.com/in/jefferson-kouao-developpeur-front-end/' target="_blank">
-                            <>
-                                <Image
-                                    src="/images/icone/linkedin.svg"
-                                    alt="LinkedIn"
-                                    width={18}
-                                    height={18}
-                                />
-                            </>
-                        </Link> 
-                    </li>
-                    <li>
-                        <Link href='https://github.com/Jeff-Erson44' target="_blank">
-                            <>
-                                <Image
-                                    src="/images/icone/github.svg"
-                                    alt="Github"
-                                    width={18}
-                                    height={18}
-                                />
-                            </>
-                        </Link> 
-                    </li>
                 </ul>
             </nav>
             <nav className="navbar__mobile">

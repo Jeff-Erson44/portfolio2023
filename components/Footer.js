@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const FooterStyle = styled.div`
     .footer__container{
-        height: 6vh;
+        height: 4vh;
         display: flex;
         justify-content: space-between;
         padding: 0 5%;
