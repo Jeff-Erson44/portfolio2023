@@ -18,7 +18,7 @@ const DetailProjetStyle = styled.div`
                     h2{
                         font-size: 1.125rem;
                         color: var(--secondary-color);
-                        margin-bottom: 8px;
+                        margin-bottom: 10px;
                         text-transform: uppercase;
                         font-weight: 500;
                         letter-spacing: 1px;
@@ -145,12 +145,6 @@ export default function DetailProjet({projet}){
                                 <div className="info-projet">
                                     <h2>Année</h2>
                                     <p>{year}</p>
-                                </div>
-                                <div className="info-projet--techno">
-                                    <h2>Techno</h2>
-                                    {techno?.map((techno) => (
-                                        <p key={techno}>{techno}</p>
-                                    ))}
                                 </div>
                             </div>
                             <h2>Description</h2>

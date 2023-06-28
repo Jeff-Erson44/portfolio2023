@@ -80,7 +80,7 @@ const GalerieStyle = styled.div`
                 display: flex;
                 position: relative;
                 overflow: hidden;
-                padding: 20px 0;
+                padding: 15px 0;
                 p{
                     position: relative;
                     transition: .5s ease-in-out;
