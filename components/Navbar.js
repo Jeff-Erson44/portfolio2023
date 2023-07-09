@@ -11,9 +11,10 @@ const NavbarStyled = styled.nav`
 
     .navbar{
         display: flex;
-        height: 8vh;
+        height: 6vh;
         padding: 0 50px;
-        background: var(--background);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.10) 100%);
+        backdrop-filter: blur(30px);
         position: fixed;
         top: 0;
         left: 0;
